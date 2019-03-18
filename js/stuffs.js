@@ -23,3 +23,50 @@ $(document).ready(function(){
     });
 });
 
+// var flkty = new Flickity('.carousel');
+// flkty.on('change', function (index) {
+//     console.log('Flickity change ' + index);
+// });
+// <!-- data-flickity='{ "imagesLoaded": true, "wrapAround" : true }'> -->
+// var $carousel = $('.carousel').flickity({
+//     "imagesLoaded": true,
+//     "wrapAround": true
+// });
+
+// $carousel.on('change.flickity', function (event, index) {
+//     console.log('Flickity change ' + index);
+// });
+
+// var flkty = new Flickity('.carousel', {
+//     "imagesLoaded": true,
+//     "wrapAround": true
+// });
+const projTitle = document.getElementById('proj-title');
+var flkty = new Flickity('.carousel', {
+    "imagesLoaded": true,
+    "wrapAround": true
+    },{
+    on: {
+        ready: function () {
+            console.log('Flickity ready');
+            
+            projTitle.innerHTML = 'Virtual Pets Amok!';
+        }
+    }
+});
+flkty.on('change', function (index) {
+    console.log('Flickity change ' + index);
+    if (index < 1) {
+        console.log('yo0');
+        projTitle.innerHTML = 'Virtual Pets Amok!';
+    } else if (index == 1) {
+        console.log('yo1');
+        projTitle.innerHTML = 'Boat Reviews!';
+    } else if (index == 2) {
+        console.log('yo2');
+        projTitle.innerHTML = 'Random Colored Random Rain!';
+    } else {
+        console.log('yo3');
+        projTitle.innerHTML = 'University Clinic, The Hospital!';
+    }
+});
