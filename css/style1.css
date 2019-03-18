@@ -257,3 +257,58 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   -webkit-transform: scale(3); /* Safari 3-8 */
   transform: scale(3); 
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main-gallery-carousel {
+  background: #EEE;
+}
+
+.carousel-gallery-cell {
+  /* width: 66%; */
+  /* height: 200px; */
+  /* margin-right: 10px; */
+  /* background: #8C8; */
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+.carousel-gallery-cell img {
+  display: block;
+  height: 400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* force scrollbar, not necessary, but may reduce gaps. Setting a max-height on .carousel also works */
+html {
+  overflow-y: scroll;
+}
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel img {
+  display: block;
+  height: 400px;
+}
+/* cell number */
+/* .carousel-gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+} */
