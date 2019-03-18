@@ -42,10 +42,10 @@ $(document).ready(function(){
 //     "wrapAround": true
 // });
 const projTitle = document.getElementById('proj-title');
-var flkty = new Flickity('.carousel', {
+const flkty = new Flickity('.carousel', {
     "imagesLoaded": true,
     "wrapAround": true
-    },{
+    }, {
     on: {
         ready: function () {
             console.log('Flickity ready');
@@ -59,6 +59,7 @@ flkty.on('change', function (index) {
     if (index < 1) {
         console.log('yo0');
         projTitle.innerHTML = 'Virtual Pets Amok!';
+        
     } else if (index == 1) {
         console.log('yo1');
         projTitle.innerHTML = 'Boat Reviews!';
